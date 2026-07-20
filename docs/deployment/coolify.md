@@ -12,9 +12,11 @@ This project is prepared for Coolify with a Dockerfile-based deployment.
 
 The application is stateless. Files should live in Supabase Storage, not on the Coolify container filesystem.
 
-## Required Environment Variables
+## Environment Variables
 
-Set these in Coolify before the first production deploy:
+### Main web app
+
+Set these in the main Coolify application before the first production deploy:
 
 - `NEXT_PUBLIC_APP_URL`
 - `NEXT_PUBLIC_SUPABASE_URL`
@@ -24,16 +26,36 @@ Set these in Coolify before the first production deploy:
 - `SUPABASE_PROJECT_REF`
 - `SUPABASE_PUBLISHABLE_KEY`
 - `SUPABASE_SECRET_KEY`
+
+### Optional web app providers
+
+These are not required for the current scaffold to boot, but should live on the main app if/when those features are enabled:
+
 - `ANTHROPIC_API_KEY`
 - `OPENAI_API_KEY`
+- `GEMINI_API_KEY`
+- `RESEND_API_KEY`
+- `MAIL_FROM`
+- `MAIL_TO_ADMIN`
+- `MAIL_REPLY_TO`
+- `MAIL_SEND_CONFIRMATION`
+- `RAG_API_SECRET`
 - `GOOGLE_DOCUMENT_AI_PROJECT_ID`
 - `GOOGLE_DOCUMENT_AI_LOCATION`
 - `GOOGLE_APPLICATION_CREDENTIALS_JSON`
-
-Optional:
-
 - `SUPABASE_ADMIN_EMAIL`
 - `SUPABASE_ADMIN_PASSWORD`
+
+### Separate worker app
+
+If `workers/service-finder` is deployed as its own Coolify service, put these there instead of the main web app:
+
+- `TAVILY_API_KEY`
+- `SERPAPI_API_KEY`
+- `SERVICE_FINDER_WORKER_ID`
+- `SERVICE_FINDER_POLL_MS`
+- `SERVICE_FINDER_HEARTBEAT_MS`
+- `SERVICE_FINDER_ENABLE_SERPAPI_FALLBACK`
 
 ## Recommended Coolify Settings
 
