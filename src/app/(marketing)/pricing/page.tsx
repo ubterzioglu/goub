@@ -21,10 +21,10 @@ export default function PricingPage() {
     <section className="section pricing-layout">
       <div className="section-heading">
         <span className="section-kicker">Pricing spine</span>
-        <h1 className="section-title">Value-based packaging for document-heavy teams.</h1>
+        <h1 className="section-title">Priced like a serious workflow, not a toy AI tab.</h1>
         <p className="muted">
-          The report recommends outcome-driven plans instead of raw token pricing so GOUB
-          can price around time saved and decision speed.
+          GOUB should be sold around decision speed, export quality, and reduced manual
+          review hours rather than raw tokens.
         </p>
       </div>
 

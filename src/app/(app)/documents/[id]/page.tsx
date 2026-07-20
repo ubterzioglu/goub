@@ -11,7 +11,7 @@ export default async function DocumentPage({
 
   return (
     <div className="insight-grid">
-      <section className="content-panel">
+      <section className="content-panel document-hero-panel">
         <div className="panel-header">
           <div>
             <span className="section-kicker">Document detail</span>
@@ -28,14 +28,24 @@ export default async function DocumentPage({
 
         <ActionRail />
 
-        <article className="summary-card">
-          <span className="section-kicker">Extracted facts</span>
-          <ul className="summary-list">
-            {document.highlights.map((highlight) => (
-              <li key={highlight}>{highlight}</li>
-            ))}
-          </ul>
-        </article>
+        <div className="document-detail-grid">
+          <article className="summary-card">
+            <span className="section-kicker">Extracted facts</span>
+            <ul className="summary-list">
+              {document.highlights.map((highlight) => (
+                <li key={highlight}>{highlight}</li>
+              ))}
+            </ul>
+          </article>
+
+          <article className="summary-card">
+            <span className="section-kicker">Operator note</span>
+            <p>
+              This file is positioned for compare and risk review. The layout should make
+              extracted truths feel cleaner than the source material itself.
+            </p>
+          </article>
+        </div>
       </section>
 
       <section className="content-panel">

@@ -18,11 +18,10 @@ export default function DocsPage() {
     <section className="section docs-layout">
       <div className="section-heading">
         <span className="section-kicker">Architecture</span>
-        <h1 className="section-title">The report translated into an executable shape.</h1>
+        <h1 className="section-title">The operating spine behind the premium surface.</h1>
         <p className="muted">
-          This scaffold mirrors the report: marketing and app surfaces in Next.js, a
-          private-by-default data layer in Supabase, and worker isolation for heavy
-          document jobs.
+          The frontend can look refined because the stack underneath stays disciplined:
+          clean boundaries, private storage, and a dedicated worker lane for heavy jobs.
         </p>
       </div>
 
