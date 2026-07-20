@@ -39,3 +39,4 @@ Set these in Coolify before the first production deploy:
 - `next.config.ts` uses `output: "standalone"` so the runtime image stays smaller.
 - The container starts with `node server.js` from Next.js standalone output.
 - If you later add Redis, workers, or background consumers, keep them as separate Coolify services.
+- The repo pins `pnpm@10.28.1` and sets `minimumReleaseAge: 0` in `pnpm-workspace.yaml` to avoid Coolify/Corepack pulling `pnpm 11` defaults that can block fresh transitive packages during Docker builds.
